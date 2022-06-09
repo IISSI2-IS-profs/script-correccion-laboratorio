@@ -2,7 +2,7 @@
 echo "Iniciando script de corrección de IISSI2: Este script añadirá la carpeta git de los proyectos base para que, desde un IDE pueda hacerse un diff y ver fácilmente lo realizado por el estudiante"
 #carpeta_frontend=$(ls -c -ltd *Frontend*)
 carpeta_frontend=$(ls -d *Frontend*)
-if test -z "$carpeta_frontend" 
+if test -z "$carpeta_frontend"
 then
       echo "No se ha encontrado carpeta que contenga la string Frontend. Renombre el directorio del alumno para contener la string Frontend (case sensitive)"
       exit 1
@@ -12,22 +12,22 @@ fi
 echo "La carpeta de frontend encontrada es $carpeta_frontend"
 #carpeta_backend=$(ls -c -ltd *Backend*)
 carpeta_backend=$(ls -d *Backend*)
-if test -z "$carpeta_backend" 
+if test -z "$carpeta_backend"
 then
       echo "No se ha encontrado carpeta que contenga la string Backend. Renombre el directorio del alumno para contener la string Backend (case sensitive)"
       exit 1
 else
       echo "Se ha encontrado carpeta de back-end: $carpeta_backend"
 fi
-git clone https://github.com/IISSI2-IS-profs/DeliverUS-Backend.git backend-base
-git clone https://github.com/IISSI2-IS-profs/DeliverUS-Frontend-Owner.git frontend-base
+git clone https://github.com/IISSI2-IS/DeliverUS-Backend.git backend-base
+git clone https://github.com/IISSI2-IS/DeliverUS-Frontend-Owner.git frontend-base
 cp -R ./frontend-base/.git ./$carpeta_frontend
 cp -R ./backend-base/.git ./$carpeta_backend
 rm -rf ./frontend-base
 rm -rf ./backend-base
-read -p "El script de inicialización de GIT finalizó con éxito. ¿Quiere hacer npm install y start en los dos proyectos? y/n" yn
+read -p "El script de inicialización de GIT finalizó con éxito. ¿Quiere hacer npm install y start en los dos proyectos? y/n " yn
     case $yn in
-        [Yy]* ) cd ./$carpeta_backend;npm install;cd ..; cd ./$carpeta_frontend;npm install;echo "Npm install ejecutado en ambos proyectos. Abriendo VSCode y haciendo npm start de front-end (back-end deberás hacerlo a mano ya que ambos tienen que ser interactivos)";code .;npm start;;
+        [Yy]* ) echo "Abriendo VSCode...";code .;cd ./$carpeta_backend;npm install;cd ..; cd ./$carpeta_frontend;npm install;echo "Npm install ejecutado en ambos proyectos. Haciendo npm start de front-end (back-end deberás hacerlo a mano ya que ambos tienen que ser interactivos)";npm start;;
         [Nn]* ) echo "Abriendo VSCode...";code .;exit 0;;
         * ) echo "Conteste yes o no.";;
     esac
