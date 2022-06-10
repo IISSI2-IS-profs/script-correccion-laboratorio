@@ -25,6 +25,15 @@ cp -R ./frontend-base/.git ./$carpeta_frontend
 cp -R ./backend-base/.git ./$carpeta_backend
 rm -rf ./frontend-base
 rm -rf ./backend-base
+cd ./$carpeta_backend
+git config core.filemode false
+git config core.autocrlf false
+git config core.whitespace cr-at-eol
+cd ..
+cd ./$carpeta_frontend
+git config core.filemode false
+git config core.autocrlf false
+git config core.whitespace cr-at-eol
 read -p "El script de inicialización de GIT finalizó con éxito. ¿Quiere hacer npm install y start en los dos proyectos? y/n " yn
     case $yn in
         [Yy]* ) echo "Abriendo VSCode...";code .;cd ./$carpeta_backend;npm install;cd ..; cd ./$carpeta_frontend;npm install;echo "Npm install ejecutado en ambos proyectos. Haciendo npm start de front-end (back-end deberás hacerlo a mano ya que ambos tienen que ser interactivos)";npm start;;
