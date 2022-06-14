@@ -37,7 +37,7 @@ git config core.whitespace cr-at-eol
 cd ..
 read -p "El script de inicialización de GIT finalizó con éxito. ¿Quiere hacer npm install y start en los dos proyectos? y/n " yn
     case $yn in
-        [Yy]* ) echo "Abriendo VSCode...";code .;cd ./$carpeta_backend;npm install;cd ..; cd ./$carpeta_frontend;npm install;echo "Npm install ejecutado en ambos proyectos. Haciendo npm start de front-end (back-end deberás hacerlo a mano ya que ambos tienen que ser interactivos)";npm start;;
+        [Yy]* ) echo "Abriendo VSCode...";code .; cd ./$carpeta_frontend;npm install;cd ..; cd ./$carpeta_backend;npm install;npx sequelize-cli db:migrate:undo:all; npx sequelize-cli db:migrate; npx sequelize-cli db:seed:all;npm start;echo "Npm install ejecutado en ambos proyectos. Haciendo npm start de back-end (front-end deberás hacerlo a mano ya que ambos tienen que ser interactivos)";;
         [Nn]* ) echo "Abriendo VSCode...";code .;exit 0;;
         * ) echo "Conteste yes o no.";;
     esac
