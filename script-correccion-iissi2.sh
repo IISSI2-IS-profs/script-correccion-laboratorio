@@ -22,7 +22,12 @@ fi
 git clone https://github.com/IISSI2-IS/DeliverUS-Backend.git backend-base
 git clone https://github.com/IISSI2-IS/DeliverUS-Frontend-Owner.git frontend-base
 cp -R ./frontend-base/.git ./$carpeta_frontend
+mv -f ./frontend-base/.env.example ./$carpeta_frontend/.env
 cp -R ./backend-base/.git ./$carpeta_backend
+mv -f ./backend-base/.env.example ./$carpeta_backend/.env
+mv -f ./backend-base/docker-compose.yml ./$carpeta_backend/docker-compose.yml
+cp ./$carpeta_backend/.env ./$carpeta_backend/.env.docker
+sed -i '' 's/localhost/mariadb/g' ./$carpeta_backend/.env.docker
 rm -rf ./frontend-base
 rm -rf ./backend-base
 cd ./$carpeta_backend
@@ -37,7 +42,7 @@ git config core.whitespace cr-at-eol
 cd ..
 read -p "El script de inicialización de GIT finalizó con éxito. ¿Quiere hacer npm install y start en los dos proyectos? y/n " yn
     case $yn in
-        [Yy]* ) echo "Abriendo VSCode...";code .; cd ./$carpeta_frontend;mv .env.example .env; npm install;cd ..; cd ./$carpeta_backend;mv .env.example .env; npm install;npx sequelize-cli db:migrate:undo:all; npx sequelize-cli db:migrate; npx sequelize-cli db:seed:all;npm start;echo "Npm install ejecutado en ambos proyectos. Haciendo npm start de back-end (front-end deberás hacerlo a mano ya que ambos tienen que ser interactivos)";;
+        [Yy]* ) echo "Abriendo VSCode...";code .;cd ./$carpeta_backend;docker-compose up -d; cd ..; cd ./$carpeta_frontend;npm install;npm start;echo "Npm install ejecutado en ambos proyectos. Haciendo npm start de back-end en docker y front-end en local";;
         [Nn]* ) echo "Abriendo VSCode...";code .;exit 0;;
         * ) echo "Conteste yes o no.";;
     esac
