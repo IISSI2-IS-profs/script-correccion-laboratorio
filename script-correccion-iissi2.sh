@@ -28,6 +28,7 @@ mv -f ./backend-base/.env.example ./$carpeta_backend/.env
 mv -f ./backend-base/docker-compose.yml ./$carpeta_backend/docker-compose.yml
 cp ./$carpeta_backend/.env ./$carpeta_backend/.env.docker
 sed -i '' 's/localhost/mariadb/g' ./$carpeta_backend/.env.docker
+sed -i '' 's/localhost/mariadb/g' ./$carpeta_backend/.env
 rm -rf ./frontend-base
 rm -rf ./backend-base
 cd ./$carpeta_backend
