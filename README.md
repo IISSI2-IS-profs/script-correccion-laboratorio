@@ -8,7 +8,7 @@ Se espera la siguiente estructura de carpetas
   * LX-FC 5
   * resto de proyectos de estudiantes
 
-El script se ejecuta desde esta carpeta con:
+El script se ejecuta desde esta carpeta raíz pasandole como argumento el nombre de la carpeta que contiene los proyectos:
 
 Windows:
 ```Bash
@@ -16,7 +16,7 @@ bash script-correccion-iissi2-backend-Fer.sh LX
 ```
 MacOS
 ```Macos
-bash script-correccion-iissi2-backend-Fer.sh LX
+sudo bash script-correccion-iissi2-backend-Fer.sh LX
 ```
 En cada proyecto de los estudiantes aparecerá un fichero llamado `resumen_tests.txt` donde se habrá calculado el agregado. Por ejemplo:
 
