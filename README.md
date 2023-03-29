@@ -33,6 +33,9 @@ En la carpeta `thunder-reports` de cada grupo aparecerán los resultados de los 
 Este puede ser un texto a compartir con ellos a través de un pull request del repo de estudiantes si lo habilitastéis al crear el assignment o un issue y **adjuntar también el CSV generado en thunder-report** (se puede arrastrar sobre el cuadro de comentario):
 
 ```Text
+Título: Evaluación primer entregable
+
+Comentario:
 Estimados estudiantes,
 se ha procedido a realizar una corrección automática de su primer entregable.
 
