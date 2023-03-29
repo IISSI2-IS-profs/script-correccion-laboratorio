@@ -4,20 +4,24 @@ Se espera la siguiente estructura de carpetas
 
 - `script-correccion-iissi2-backend-Fer.sh`
 - LX
-  * LX-FC 3
-  * LX-FC 5
-  * resto de proyectos de estudiantes
+  - LX-FC 3
+  - LX-FC 5
+  - resto de proyectos de estudiantes
 
 El script se ejecuta desde esta carpeta raíz pasandole como argumento el nombre de la carpeta que contiene los proyectos:
 
 Windows:
+
 ```Bash
 bash script-correccion-iissi2-backend-Fer.sh LX
 ```
+
 MacOS
+
 ```Macos
 sudo bash script-correccion-iissi2-backend-Fer.sh LX
 ```
+
 En cada proyecto de los estudiantes aparecerá un fichero llamado `resumen_tests.txt` donde se habrá calculado el agregado. Por ejemplo:
 
 ```Javascript
@@ -59,15 +63,19 @@ Alejandro.
 1. Agrega los resultados y los guarda en resumen_tests.txt
 
 # script-correccion-laboratorio 2022
+
 *ATENCIÓN*: Si usa Windows (solo si usa Windows), haga los siguientes pasos:
+
 1. wsl --install (si tiene Git Bash puede usar Git bash para ejecutar)
 2. Reinicie el sistema
 3. Abrir windows terminal (NO SÍMBOLO DEL SISTEMA)
 
 PASOS PARA USUARIOS MAC/LINUX:
+
 1. Antes de correr el script, abre VSCode, pulse ctrl + shift + p y seleccionar Comando shell: Instalar el comando 'code' en el PATH.
 
 PASOS PARA TODOS:
+
 1. Descargue el proyecto del alumno.
 2. Copie este archivo script-correccion-iissi2.sh en la carpeta descomprimida. El archivo .sh debe ser hermano de los 2 proyectos del alumno: Frontend y Backend
 3. Navegue desde el terminal a la carpeta descomprimida donde se encuentra el archivo .sh
