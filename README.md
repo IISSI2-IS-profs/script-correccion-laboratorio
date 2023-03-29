@@ -1,4 +1,4 @@
-#script-correccion-backend-Fer 2023
+# script-correccion-backend-Fer 2023
 
 Se espera la siguiente estructura de carpetas
 
