@@ -13,13 +13,13 @@ El script se ejecuta desde esta carpeta raíz pasandole como argumento el nombre
 Windows:
 
 ```Bash
-bash script-correccion-iissi2-backend-Fer.sh LX
+bash script-correccion-iissi2-backend-Fer-win.sh LX
 ```
 
 MacOS
 
-```Macos
-sudo bash script-correccion-iissi2-backend-Fer.sh LX
+```Bash
+sudo bash script-correccion-iissi2-backend-Fer-macos.sh LX
 ```
 
 En cada proyecto de los estudiantes aparecerá un fichero llamado `resumen_tests.txt` donde se habrá calculado el agregado. Por ejemplo:
