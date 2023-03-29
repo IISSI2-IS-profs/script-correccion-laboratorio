@@ -1,4 +1,64 @@
-# script-correccion-laboratorio
+#script-correccion-backend-Fer 2023
+
+Se espera la siguiente estructura de carpetas
+
+- `script-correccion-iissi2-backend-Fer.sh`
+- LX
+  * LX-FC 3
+  * LX-FC 5
+  * resto de proyectos de estudiantes
+
+El script se ejecuta desde esta carpeta con:
+
+Windows:
+```Bash
+bash script-correccion-iissi2-backend-Fer.sh LX
+```
+MacOS
+```Macos
+bash script-correccion-iissi2-backend-Fer.sh LX
+```
+En cada proyecto de los estudiantes aparecerá un fichero llamado `resumen_tests.txt` donde se habrá calculado el agregado. Por ejemplo:
+
+```Javascript
+{"Pass":55,"Fail":22,"Error":9}
+```
+
+En la carpeta `thunder-reports` de cada grupo aparecerán los resultados de los tests pormenorizados en csv y html. Podéis también compartirlos con cada grupo.
+
+Este puede ser un texto a compartir con ellos a través de un pull request del repo de estudiantes si lo habilitastéis al crear el assignment o un issue y **adjuntar también el CSV generado en thunder-report** (se puede arrastrar sobre el cuadro de comentario):
+
+```Text
+Estimados estudiantes,
+se ha procedido a realizar una corrección automática de su primer entregable.
+
+El proyecto base cumplía ya con 41 tests y estos son los resultados para su proyecto:
+{"Pass":55,"Fail":22,"Error":9}
+
+Resultados pormenorizados:
+thunder-report.csv
+
+
+Tenga en cuenta que estos tests pueden obviar algunas situaciones. Por ejemplo, hemos comprobado que algunos grupos no almacenaban correctamente las líneas de pedido en la tabla intermedia entre Order y Product, y sólo se guardaba como objeto en memoria, por lo que el test correspondiente ha podido ejecutarse con éxito, es necesario solucionar esto para que en Frontend puedan mostrarse correctamente los pedidos.
+
+Es necesario que aborde las posibles deficiencias encontradas para el correcto funcionamiento del sistema en su conjunto y poder continuar desarrollando el Frontend.
+
+Un saludo,
+Alejandro.
+
+```
+
+## ¿Qué pasos sigue este script?
+
+1. Descarga el repositorio backend base en la raíz
+1. Copia el .env y el .git del repo base (al copiar el .git, si luego abres desde VSC, puedes ver cómodamente las diferencias)
+1. Copia el settings.json para que thunder-cli funcione correctamente
+1. Elimina el package-lock.json, cuando es generado por versiones antiguas de npm impide la instalación de dependencias en versiones actuales de npm.
+1. Instalaa dependencias, rebuild database, lanzar servidor
+1. Ejecuta los tests TC, generando el csv y html
+1. Agrega los resultados y los guarda en resumen_tests.txt
+
+# script-correccion-laboratorio 2022
 *ATENCIÓN*: Si usa Windows (solo si usa Windows), haga los siguientes pasos:
 1. wsl --install (si tiene Git Bash puede usar Git bash para ejecutar)
 2. Reinicie el sistema
