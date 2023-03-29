@@ -43,7 +43,7 @@ Resultados pormenorizados:
 thunder-report.csv
 
 
-Tenga en cuenta que estos tests pueden obviar algunas situaciones. Por ejemplo, hemos comprobado que algunos grupos no almacenaban correctamente las líneas de pedido en la tabla intermedia entre Order y Product, y sólo se guardaba como objeto en memoria, por lo que el test correspondiente ha podido ejecutarse con éxito, es necesario solucionar esto para que en Frontend puedan mostrarse correctamente los pedidos.
+Tenga en cuenta que estos tests pueden obviar algunas situaciones. Por ejemplo, hemos comprobado que algunos grupos no almacenaban correctamente las líneas de pedido en la tabla intermedia entre Order y Product, y sólo se guardaba como objeto en memoria, por lo que el test correspondiente ha podido ejecutarse con éxito. Sin embargo, es necesario solucionar esto para que en Frontend puedan mostrarse correctamente los pedidos.
 
 Es necesario que aborde las posibles deficiencias encontradas para el correcto funcionamiento del sistema en su conjunto y poder continuar desarrollando el Frontend.
 
@@ -58,7 +58,7 @@ Alejandro.
 1. Copia el .env y el .git del repo base (al copiar el .git, si luego abres desde VSC, puedes ver cómodamente las diferencias)
 1. Copia el settings.json para que thunder-cli funcione correctamente
 1. Elimina el package-lock.json, cuando es generado por versiones antiguas de npm impide la instalación de dependencias en versiones actuales de npm.
-1. Instalaa dependencias, rebuild database, lanzar servidor
+1. Instala dependencias, rebuild database, lanzar servidor
 1. Ejecuta los tests TC, generando el csv y html
 1. Agrega los resultados y los guarda en resumen_tests.txt
 
