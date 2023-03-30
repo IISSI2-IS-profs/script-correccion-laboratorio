@@ -52,26 +52,22 @@ Es necesario que aborde las posibles deficiencias encontradas para el correcto f
 
 Un saludo,
 Alejandro.
-
 ```
 
 En el caso de que no se haya podido generar el informe por malfuncionamiento del backend, podéis compartirles este mensaje:
 
 ```
-
 Estimados estudiantes,
 se ha procedido a realizar una corrección automática de su primer entregable.
 
-Debido a que alguno de los tests provocan la caída del servidor por un error no depurado, no se ha podido generar el informe. Es necesario que corrija los errores y se asegure de que todos los tests se ejecutan correctamente para el correcto funcionamiento del sistema en su conjunto y poder continuar desarrollando el Frontend.
+Debido a que alguno de los tests provoca la caída del servidor por un error no depurado, o desencadena una ejecución que no termina, no se ha podido generar el informe. Es necesario que corrija los errores y se asegure de que todos los tests se ejecutan correctamente para el correcto funcionamiento del sistema en su conjunto y poder continuar desarrollando el Frontend.
 
 Tenga en cuenta, además, que estos tests pueden obviar algunas situaciones. Por ejemplo, hemos comprobado que algunos grupos no almacenaban correctamente las líneas de pedido en la tabla intermedia entre Order y Product, y sólo se guardaba como objeto en memoria, por lo que el test correspondiente ha podido ejecutarse con éxito. Sin embargo, es necesario solucionar esto para que en Frontend puedan mostrarse correctamente los pedidos.
-
 
 
 Un saludo,
 Alejandro.
 ```
-
 
 ## ¿Qué pasos sigue este script?
 
