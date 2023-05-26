@@ -1,12 +1,34 @@
+# script-correccion-indiviudal-laboratorio 2023
+
+1. Descargar los proyectos de los grupos de laboratorio que tutelamos de ev y descomprimirlos cada uno en su carpeta.
+1. En la carpeta padre a todos los proyectos, ejecutar el `script-corrección-preconfiguración.sh`
+
+   * Se copiara el fichero `.git` en cada carpeta de alumno de manera que cuando abras ese proyecto en VSCode te aparezcan los cambios en la barra de git.
+
+1. Para corregir cada examen, abrir cada proyecto, y en terminal se puede desplegar ejecutando:
+
+    ```Bash
+    npm run install:all:win
+    npm run start:backend
+    ```
+
+    y en otra consola se lanza el frontend:
+
+    ```Bash
+    npm run start:frontend
+    ```
+
+1. *Opcionalmente* puedes ejecutar el fichero `script-correccion-iissi2-2023-lab-individual.sh` en cada proyecto que ayuda a hacer el despliegue.
+
 # script-correccion-backend-Fer 2023
 
 Se espera la siguiente estructura de carpetas
 
-- `script-correccion-iissi2-backend-Fer.sh`
-- LX
-  - LX-FC 3
-  - LX-FC 5
-  - resto de proyectos de estudiantes
+* `script-correccion-iissi2-backend-Fer.sh`
+* LX
+  * LX-FC 3
+  * LX-FC 5
+  * resto de proyectos de estudiantes
 
 El script se ejecuta desde esta carpeta raíz pasandole como argumento el nombre de la carpeta que contiene los proyectos:
 
